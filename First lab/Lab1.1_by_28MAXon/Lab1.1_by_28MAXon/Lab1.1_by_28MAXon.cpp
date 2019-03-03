@@ -10,7 +10,7 @@ public:
 	int control()
 	{
 		string t;
-		start:
+	start:
 		cin >> t;
 		if (t.length() == 0)
 		{
@@ -83,7 +83,7 @@ op:
 		goto op;
 	}
 	char operation = oper[0];
-	if (operation != '+' || operation != '-' || operation != '*' || operation != '/')
+	if (operation != '+' && operation != '-' && operation != '*' && operation != '/')
 	{
 		cout << "Ошибка ввода!\n Повторите ввод. Выберите действие из нижеприведённого списка. Нажмите знак, который соответствует выбранному действию.\n + сложение\n - вычитание\n * умножение\n / деление\n";
 		goto op;
