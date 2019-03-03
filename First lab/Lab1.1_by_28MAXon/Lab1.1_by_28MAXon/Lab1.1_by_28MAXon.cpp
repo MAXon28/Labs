@@ -11,6 +11,8 @@ public:
 	{
 		double t;
 		while (!(cin >> t) || cin.get() != '\n')
+		cin >> t;
+		if (t.length() == 0)
 		{
 			cout << " Ошибка ввода! Повторите ввод заново:\n";
 			cin.clear();
