@@ -9,14 +9,12 @@ class complex
 public:
 	int control()
 	{
-		double t;
-		while (!(cin >> t) || cin.get() != '\n')
+		string t;
+		start:
 		cin >> t;
 		if (t.length() == 0)
 		{
-			cout << " Ошибка ввода! Повторите ввод заново:\n";
-			cin.clear();
-			cin.sync();
+			cout << "Ошибка! Вы не ввели ни одного символа! Повторите ввод ещё раз:\n";
 			goto start;
 		}
 		for (int i = 0; i < t.length(); i++)
@@ -29,7 +27,7 @@ public:
 					{
 						cout << "Ошибка! В начале числа не может стоять 0! Повторите ввод ещё раз:\n";
 						goto start;
-		}
+					}
 					else
 					{
 						cout << "Ошибка! Нужно ввести ЧИСЛО, а не набор символов! Повторите ввод ещё раз:\n";
@@ -41,9 +39,8 @@ public:
 			{
 				cout << "Ошибка! Нужно ввести ЧИСЛО, а не набор символов! Повторите ввод ещё раз:\n";
 				goto start;
+			}
 		}
-		return t;
-	}
 		double number = stod(t);
 		return number;
 	}
@@ -64,13 +61,13 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	komplex komplex_number_one;
 	komplex komplex_number_two;
-	char oper;
+	complex check;
 	string oper;
 	cout << " Общий вид комплексного числа:\n z = x + y * i\n";
-	cout << " Введите первое комплексное число (сначала действительную часть, а затем мнимую):\n";
-	cin >> komplex_number_one.x >> komplex_number_one.y;
-	cout << " Введите второе комплексное число (сначала действительную часть, а затем мнимую):\n";
-	cin >> komplex_number_two.x >> komplex_number_two.y;
+	cout << " Введите первое комплексное число\n Cначала действительную часть:\n";
+	komplex_number_one.x = check.control();
+	cout << " Теперь мнимую часть:\n";
+	komplex_number_one.y = check.control();
 	cout << " Введите второе комплексное число\n Cначала действительную часть:\n";
 	komplex_number_two.x = check.control();
 	cout << " Теперь мнимую часть:\n";
@@ -80,7 +77,7 @@ int main()
 	cout << "\t\t\t\t\t\tКАЛЬКУЛЯТОР\n Выберите действие из нижеприведённого списка. Нажмите знак, который соответствует выбранному действию.\n + сложение\n - вычитание\n * умножение\n / деление\n";
 op:
 	cin >> oper;
-	switch (oper)
+	if (check.verification(oper.length()) == false)
 	{
 		cout << "Ошибка ввода!\n Повторите ввод. Выберите действие из нижеприведённого списка. Нажмите знак, который соответствует выбранному действию.\n + сложение\n - вычитание\n * умножение\n / деление\n";
 		goto op;
