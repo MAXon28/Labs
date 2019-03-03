@@ -15,8 +15,35 @@ public:
 			cout << " Ошибка ввода! Повторите ввод заново:\n";
 			cin.clear();
 			cin.sync();
+			goto start;
+		}
+		for (int i = 0; i < t.length(); i++)
+		{
+			if (i == 0)
+			{
+				if (t[i] <= 48 || t[i] > 57)
+				{
+					if (t[i] == '0')
+					{
+						cout << "Ошибка! В начале числа не может стоять 0! Повторите ввод ещё раз:\n";
+						goto start;
+		}
+					else
+					{
+						cout << "Ошибка! Нужно ввести ЧИСЛО, а не набор символов! Повторите ввод ещё раз:\n";
+						goto start;
+					}
+				}
+			}
+			if (t[i] < 48 || t[i] > 57)
+			{
+				cout << "Ошибка! Нужно ввести ЧИСЛО, а не набор символов! Повторите ввод ещё раз:\n";
+				goto start;
 		}
 		return t;
+	}
+		double number = stod(t);
+		return number;
 	}
 	bool verification(int o)
 	{

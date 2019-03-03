@@ -1,8 +1,8 @@
 #ifndef Complex_h
 #define Complex_h
 struct komplex {
-	double x; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
-	double y; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	double x; // Действительная часть
+	double y; // Мнимая часть
 };
 void sum(komplex komplex_number_1, komplex komplex_number_2);
 void sub(komplex komplex_number_1, komplex komplex_number_2);
