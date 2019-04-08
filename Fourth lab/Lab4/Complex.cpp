@@ -1,4 +1,4 @@
-#include "pch.h" 
+ï»¿#include "pch.h" 
 #include "Complex.h"
 #include <iostream> 
 using namespace std;
@@ -7,35 +7,35 @@ Complex::Complex()
 {
 	Re_z = 0.0;
 	Im_z = 0.0;
-	cout << " Ñðàáîòàë ïóñòîé êîíñòðóêòîð\n";
+	cout << " Ð¡Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð» Ð¿ÑƒÑÑ‚Ð¾Ð¹ ÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€\n";
 }
 
 Complex::Complex(double x, double y)
 {
 	Re_z = x;
 	Im_z = y;
-	cout << " Ñðàáîòàë êîíñòðóêòîð ñ ïàðàìåòðàìè\n";
+	cout << " Ð¡Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð» ÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ Ñ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°Ð¼Ð¸\n";
 }
 
 Complex::Complex(const Complex& z)
 {
 	Re_z = z.Re_z;
 	Im_z = z.Im_z;
-	cout << " Ñðàáîòàë êîíñòðóêòîð êîïèðîâàíèÿ\n";
+	cout << " Ð¡Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð» ÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ ÐºÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ\n";
 }
 
 Complex::Complex(double x) : Re_z(x)
 {
 	Im_z = 0.0;
-	cout << " Ñðàáîòàë êîíñòðóêòîð èíèöèàëèçàöèè\n";
+	cout << " Ð¡Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð» ÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ Ð¸Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ð¸\n";
 }
 
 void Complex::getInform()
 {
-	cout << " Âèä êîìïëåêñíîãî ÷èñëà: z = " << Re_z << " + " << Im_z << " * i" << endl;
+	cout << " Ð’Ð¸Ð´ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°: z = " << Re_z << " + " << Im_z << " * i" << endl;
 	cout << " Re_z = " << Re_z << endl;
 	cout << " Im_z = " << Im_z << endl;
 	double modul;
 	modul = sqrt(Re_z * Re_z + Im_z * Im_z);
-	cout << " Ìîäóëü êîìïëåêñíîãî ÷èñëà: |z| = " << modul;
+	cout << " ÐœÐ¾Ð´ÑƒÐ»ÑŒ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°: |z| = " << modul;
 }

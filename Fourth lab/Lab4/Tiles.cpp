@@ -1,4 +1,4 @@
-#include "pch.h" 
+п»ї#include "pch.h" 
 #include "Tiles.h"
 #include <string>
 #include <iostream> 
@@ -6,11 +6,11 @@ using namespace std;
 
 Tiles::Tiles()
 {
-	brand = "Нет данных";
+	brand = "РќРµС‚ РґР°РЅРЅС‹С…";
 	size_h = 0.0;
 	size_w = 0.0;
 	price = 0.0;
-	cout << " Сработал пустой конструктор\n";
+	cout << " РЎСЂР°Р±РѕС‚Р°Р» РїСѓСЃС‚РѕР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ\n";
 }
 
 Tiles::Tiles(string b, double height, double width, double cost)
@@ -19,7 +19,7 @@ Tiles::Tiles(string b, double height, double width, double cost)
 	size_h = height;
 	size_w = width;
 	price = cost;
-	cout << " Сработал конструктор с параметрами\n";
+	cout << " РЎСЂР°Р±РѕС‚Р°Р» РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё\n";
 }
 
 Tiles::Tiles(const Tiles& tile)
@@ -28,26 +28,26 @@ Tiles::Tiles(const Tiles& tile)
 	size_h = tile.size_h;
 	size_w = tile.size_w;
 	price = tile.price;
-	cout << " Сработал конструктор копирования\n";
+	cout << " РЎСЂР°Р±РѕС‚Р°Р» РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ\n";
 }
 
 Tiles::Tiles(double cost) : price(cost)
 {
-	brand = "Нет данных";
+	brand = "РќРµС‚ РґР°РЅРЅС‹С…";
 	size_h = 0.0;
 	size_w = 0.0;
-	cout << " Сработал конструктор инициализации\n";
+	cout << " РЎСЂР°Р±РѕС‚Р°Р» РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё\n";
 }
 
 Tiles::~Tiles()
 {
-	cout << " Удаление кафеля бренда " << brand << endl;
+	cout << " РЈРґР°Р»РµРЅРёРµ РєР°С„РµР»СЏ Р±СЂРµРЅРґР° " << brand << endl;
 }
 
 void Tiles::getData()
 {
-	cout << " Бренд: " << brand << endl;
-	cout << " Высота: " << size_h << endl;
-	cout << " Ширина: " << size_w << endl;
-	cout << " Цена: " << price << endl;
+	cout << " Р‘СЂРµРЅРґ: " << brand << endl;
+	cout << " Р’С‹СЃРѕС‚Р°: " << size_h << endl;
+	cout << " РЁРёСЂРёРЅР°: " << size_w << endl;
+	cout << " Р¦РµРЅР°: " << price << endl;
 }

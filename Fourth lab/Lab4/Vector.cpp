@@ -1,4 +1,4 @@
-#include "pch.h" 
+ï»¿#include "pch.h" 
 #include "Vector.h"
 #include <iostream> 
 using namespace std;
@@ -8,7 +8,7 @@ Vector::Vector()
 	x = 0.0;
 	y = 0.0;
 	z = 0.0;
-	cout << " Ñðàáîòàë ïóñòîé êîíñòðóêòîð\n";
+	cout << " Ð¡Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð» Ð¿ÑƒÑÑ‚Ð¾Ð¹ ÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€\n";
 }
 
 Vector::Vector(double i, double j, double k)
@@ -16,7 +16,7 @@ Vector::Vector(double i, double j, double k)
 	x = i;
 	y = j;
 	z = k;
-	cout << " Ñðàáîòàë êîíñòðóêòîð ñ ïàðàìåòðàìè\n";
+	cout << " Ð¡Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð» ÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ Ñ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°Ð¼Ð¸\n";
 }
 
 Vector::Vector(const Vector& vector)
@@ -24,14 +24,14 @@ Vector::Vector(const Vector& vector)
 	x = vector.x;
 	y = vector.y;
 	z = vector.z;
-	cout << " Ñðàáîòàë êîíñòðóêòîð êîïèðîâàíèÿ\n";
+	cout << " Ð¡Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð» ÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ ÐºÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ\n";
 }
 
 Vector::Vector(double j) : y(j)
 {
 	x = 0.0;
 	z = 0.0;
-	cout << " Ñðàáîòàë êîíñòðóêòîð èíèöèàëèçàöèè\n";
+	cout << " Ð¡Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð» ÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ Ð¸Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ð¸\n";
 }
 
 void Vector::get_vector()

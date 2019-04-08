@@ -1,4 +1,4 @@
-#include "pch.h" 
+ï»¿#include "pch.h" 
 #include "Child.h"
 #include <string>
 #include <iostream> 
@@ -6,17 +6,17 @@ using namespace std;
 
 void Child::set_information()
 {
-	cout << " Èìÿ: ";
+	cout << " Ð˜Ð¼Ñ: ";
 	cin >> name;
-	cout << " Ôàìèëèÿ: ";
+	cout << " Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ: ";
 	cin >> surname;
-	cout << " Âîçðàñò: ";
+	cout << " Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚: ";
 	cin >> age;
 }
 
 void Child::get_information()
 {
-	cout << " Èìÿ: " << name << endl;
-	cout << " Ôàìèëèÿ: " << surname << endl;
-	cout << " Âîçðàñò: " << age << endl;
+	cout << " Ð˜Ð¼Ñ: " << name << endl;
+	cout << " Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ: " << surname << endl;
+	cout << " Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚: " << age << endl;
 }

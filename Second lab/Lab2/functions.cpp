@@ -1,4 +1,4 @@
-#include "pch.h"
+ï»¿#include "pch.h"
 #include "functions.h"
 #include <iostream>
 using namespace std;
@@ -21,7 +21,7 @@ void (*pointer (int *arr, int sum1)) (int*, int)
 
 void inverse (int *arr, int amount)
 {
-	cout << "Èíâåðòèðîâàíèå:\n";
+	cout << "Ð˜Ð½Ð²ÐµÑ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ:\n";
 	int t;
 	for (int i = 0; i < amount; i++)
 	{
@@ -37,7 +37,7 @@ void inverse (int *arr, int amount)
 
 void increase (int *arr, int amount)
 {
-	cout << "Âîçðàñòàíèå:\n";
+	cout << "Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚Ð°Ð½Ð¸Ðµ:\n";
 	int t;
 	for (int i = 0; i < amount - 1; i++)
 	{
@@ -59,7 +59,7 @@ void increase (int *arr, int amount)
 
 void decrease (int *arr, int amount)
 {
-	cout << "Óáûâàíèå:\n";
+	cout << "Ð£Ð±Ñ‹Ð²Ð°Ð½Ð¸Ðµ:\n";
 	int t;
 	for (int i = 0; i < amount - 1; i++)
 	{

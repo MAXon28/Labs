@@ -1,4 +1,4 @@
-#include "pch.h" 
+п»ї#include "pch.h" 
 #include "Child.h"
 #include <string>
 #include <iostream> 
@@ -6,10 +6,10 @@ using namespace std;
 
 Child::Child()
 {
-	name = "Нет данных";
-	surname = "Нет данных";
+	name = "РќРµС‚ РґР°РЅРЅС‹С…";
+	surname = "РќРµС‚ РґР°РЅРЅС‹С…";
 	age = 0;
-	cout << " Сработал пустой конструктор\n";
+	cout << " РЎСЂР°Р±РѕС‚Р°Р» РїСѓСЃС‚РѕР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ\n";
 }
 
 Child::Child(string n, string s_n, int a)
@@ -17,7 +17,7 @@ Child::Child(string n, string s_n, int a)
 	name = n;
 	surname = s_n;
 	age = a;
-	cout << " Сработал конструктор с параметрами\n";
+	cout << " РЎСЂР°Р±РѕС‚Р°Р» РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё\n";
 }
 
 Child::Child(const Child& children)
@@ -25,18 +25,18 @@ Child::Child(const Child& children)
 	name = children.name;
 	surname = children.surname;
 	age = children.age;
-	cout << " Сработал конструктор копирования\n";
+	cout << " РЎСЂР°Р±РѕС‚Р°Р» РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ\n";
 }
 
 Child::Child(string n, int a) : name(n), age(a)
 {
-	surname = "Нет данных";
-	cout << " Сработал конструктор инициализации\n";
+	surname = "РќРµС‚ РґР°РЅРЅС‹С…";
+	cout << " РЎСЂР°Р±РѕС‚Р°Р» РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё\n";
 }
 
 void Child::get_information()
 {
-	cout << " Имя: " << name << endl;
-	cout << " Фамилия: " << surname << endl;
-	cout << " Возраст: " << age << endl;
+	cout << " РРјСЏ: " << name << endl;
+	cout << " Р¤Р°РјРёР»РёСЏ: " << surname << endl;
+	cout << " Р’РѕР·СЂР°СЃС‚: " << age << endl;
 }

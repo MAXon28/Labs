@@ -1,4 +1,4 @@
-#include "pch.h" 
+ï»¿#include "pch.h" 
 #include "Tiles.h"
 #include <string>
 #include <iostream> 
@@ -6,8 +6,8 @@ using namespace std;
 
 void Tiles::getData()
 {
-	cout << " Áðåíä: " << brand << endl;
-	cout << " Âûñîòà: " << size_h << endl;
-	cout << " Øèðèíà: " << size_w << endl;
-	cout << " Öåíà: " << price << endl;
+	cout << " Ð‘Ñ€ÐµÐ½Ð´: " << brand << endl;
+	cout << " Ð’Ñ‹ÑÐ¾Ñ‚Ð°: " << size_h << endl;
+	cout << " Ð¨Ð¸Ñ€Ð¸Ð½Ð°: " << size_w << endl;
+	cout << " Ð¦ÐµÐ½Ð°: " << price << endl;
 }

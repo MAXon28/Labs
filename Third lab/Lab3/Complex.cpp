@@ -1,22 +1,22 @@
-#include "pch.h" 
+ï»¿#include "pch.h" 
 #include "Complex.h"
 #include <iostream> 
 using namespace std;
 
 void Complex::setInform()
 {
-	cout << " Ââåäèòå äåéñòâèòåëüíóþ ÷àñòü: ";
+	cout << " Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ‚ÐµÐ»ÑŒÐ½ÑƒÑŽ Ñ‡Ð°ÑÑ‚ÑŒ: ";
 	cin >> Re_z;
-	cout << " Ââåäèòå ìíèìóþ ÷àñòü: ";
+	cout << " Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð½Ð¸Ð¼ÑƒÑŽ Ñ‡Ð°ÑÑ‚ÑŒ: ";
 	cin >> Im_z;
 }
 
 void Complex::getInform()
 {
-	cout << " Âèä êîìïëåêñíîãî ÷èñëà: z = " << Re_z << " + " << Im_z << " * i" << endl;
+	cout << " Ð’Ð¸Ð´ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°: z = " << Re_z << " + " << Im_z << " * i" << endl;
 	cout << " Re_z = " << Re_z << endl;
 	cout << " Im_z = " << Im_z << endl;
 	double modul;
 	modul = sqrt(Re_z * Re_z + Im_z * Im_z);
-	cout << " Ìîäóëü êîìïëåêñíîãî ÷èñëà: |z| = " << modul;
+	cout << " ÐœÐ¾Ð´ÑƒÐ»ÑŒ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°: |z| = " << modul;
 }
