@@ -1,18 +1,18 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	string email;
-	cout << "Ââåäèòå ýëåêòðîííóþ ïî÷òó: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐºÑ‚Ñ€Ð¾Ð½Ð½ÑƒÑŽ Ð¿Ð¾Ñ‡Ñ‚Ñƒ: ";
 	bool isTrue = false;
 	int count = 0;
 	while (isTrue != true)
 	{
 		if (count != 0)
 		{
-			cout << "Ýëåêòðîííàÿ ïî÷òà ââåäåíà íåâåðíî! Ïîïðîáóéòå åù¸ ðàç: ";
+			cout << "Ð­Ð»ÐµÐºÑ‚Ñ€Ð¾Ð½Ð½Ð°Ñ Ð¿Ð¾Ñ‡Ñ‚Ð° Ð²Ð²ÐµÐ´ÐµÐ½Ð° Ð½ÐµÐ²ÐµÑ€Ð½Ð¾! ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ñ‘ Ñ€Ð°Ð·: ";
 		}
 		cin >> email;
 		for (int i = 0; i < email.length(); i++)
@@ -29,5 +29,5 @@ int main()
 		}
 		count++;
 	}
-    cout << "Ýëåêòðîííàÿ ïî÷òà ââåäåíà âåðíî!";
+    cout << "Ð­Ð»ÐµÐºÑ‚Ñ€Ð¾Ð½Ð½Ð°Ñ Ð¿Ð¾Ñ‡Ñ‚Ð° Ð²Ð²ÐµÐ´ÐµÐ½Ð° Ð²ÐµÑ€Ð½Ð¾!";
 }

@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <ctime>
 using namespace std;
 
@@ -6,26 +6,26 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	srand(time(0));
-	int rowsMartix; // количество строк
-	int columnsMatrix; // количество столбцов
+	int rowsMartix; // РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє
+	int columnsMatrix; // РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ
 	int counter = 0;
-	cout << "Введите количество строк матрицы (от 1 до 100 включительно): ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РјР°С‚СЂРёС†С‹ (РѕС‚ 1 РґРѕ 100 РІРєР»СЋС‡РёС‚РµР»СЊРЅРѕ): ";
 	do
 	{
 		if (counter != 0)
 		{
-			cout << "Неверный ввод! Попробуйте ещё раз: ";
+			cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰С‘ СЂР°Р·: ";
 		}
 		cin >> rowsMartix;
 		counter++;
 	} while (!(rowsMartix >= 1 && rowsMartix <= 100));
-	cout << "Введите количество столбцов матрицы (от 1 до 50 включительно): ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ РјР°С‚СЂРёС†С‹ (РѕС‚ 1 РґРѕ 50 РІРєР»СЋС‡РёС‚РµР»СЊРЅРѕ): ";
 	counter = 0;
 	do
 	{
 		if (counter != 0)
 		{
-			cout << "Неверный ввод! Попробуйте ещё раз: ";
+			cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰С‘ СЂР°Р·: ";
 		}
 		cin >> columnsMatrix;
 		counter++;
@@ -35,7 +35,7 @@ int main()
 	{
 		matrix[i] = new int[columnsMatrix];
 	}
-	cout << "Матрица:" << endl;
+	cout << "РњР°С‚СЂРёС†Р°:" << endl;
 	for (int i = 0; i < rowsMartix; i++)
 	{
 		for (int j = 0; j < columnsMatrix; j++)
@@ -53,7 +53,7 @@ int main()
 		}
 	}
 	int k;
-	cout << "Введите число k: ";
+	cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ k: ";
 	cin >> k;
 	int saveFirstElement;
 	while (k != 0)
@@ -79,7 +79,7 @@ int main()
 		matrix[rowsMartix - 1][columnsMatrix - 1] = saveFirstElement;
 		k--;
 	}
-	cout << "Обновленная матрица:" << endl;
+	cout << "РћР±РЅРѕРІР»РµРЅРЅР°СЏ РјР°С‚СЂРёС†Р°:" << endl;
 	for (int i = 0; i < rowsMartix; i++)
 	{
 		for (int j = 0; j < columnsMatrix; j++)

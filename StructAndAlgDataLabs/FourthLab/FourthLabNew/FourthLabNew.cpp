@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 #include <fstream>
@@ -39,7 +39,7 @@ int AddBase(vector <BusRoute>& list)
 	fin.open("Routes.txt");
 	if (!fin.is_open())
 	{
-		cout << "\nÔàéëû íå ñóùåñòâóåò!\n";
+		cout << "\nÐ¤Ð°Ð¹Ð»Ñ‹ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!\n";
 	}
 	else
 	{
@@ -54,28 +54,28 @@ int AddBase(vector <BusRoute>& list)
 			count++;
 		}
 		fin.close();
-		cout << "Äàííûå óñïåøíî ñ÷èòàëèñü!\n";
+		cout << "Ð”Ð°Ð½Ð½Ñ‹Ðµ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÑ‡Ð¸Ñ‚Ð°Ð»Ð¸ÑÑŒ!\n";
 	}
 	return 0;
 }
 
 void OutputList(vector <BusRoute>& list, int size)
 {
-	cout << "\nÑïèñîê àâòîáóñíûõ ìàðøðóòîâ:" << endl;
+	cout << "\nÐ¡Ð¿Ð¸ÑÐ¾Ðº Ð°Ð²Ñ‚Ð¾Ð±ÑƒÑÐ½Ñ‹Ñ… Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚Ð¾Ð²:" << endl;
 	for (int i = 0; i < size; i++)
 	{
-		cout << "Àâòîáóñ " << i + 1 << ":" << endl;
-		cout << "Íîìåð ìàðøðóòà: " << list[i].flightNumber << endl;
-		cout << "Íàçâàíèå êîíå÷íîãî íàñåëåííîãî ïóíêòà: " << list[i].nameOfDestination << endl;
-		cout << "Öåíà áèëåòà: " << list[i].ticketPrice << endl;
-		cout << "Âðåìÿ îòïðàâëåíèÿ: " << list[i].departureTime << endl;
+		cout << "ÐÐ²Ñ‚Ð¾Ð±ÑƒÑ " << i + 1 << ":" << endl;
+		cout << "ÐÐ¾Ð¼ÐµÑ€ Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚Ð°: " << list[i].flightNumber << endl;
+		cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÐºÐ¾Ð½ÐµÑ‡Ð½Ð¾Ð³Ð¾ Ð½Ð°ÑÐµÐ»ÐµÐ½Ð½Ð¾Ð³Ð¾ Ð¿ÑƒÐ½ÐºÑ‚Ð°: " << list[i].nameOfDestination << endl;
+		cout << "Ð¦ÐµÐ½Ð° Ð±Ð¸Ð»ÐµÑ‚Ð°: " << list[i].ticketPrice << endl;
+		cout << "Ð’Ñ€ÐµÐ¼Ñ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: " << list[i].departureTime << endl;
 		cout << endl;
 	}
 }
 
 void Sort(vector <BusRoute>& list, int size)
 {
-	cout << "\nCîðòèðîâêà ìàðøðóòîâ ïî íîìåðó ðåéñà!\n";
+	cout << "\nCÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚Ð¾Ð² Ð¿Ð¾ Ð½Ð¾Ð¼ÐµÑ€Ñƒ Ñ€ÐµÐ¹ÑÐ°!\n";
 	for (int i = 0; i < list.size(); i++)
 	{
 		for (int j = 0; j < list.size() - i - 1; j++) 
@@ -92,25 +92,25 @@ void Search(vector <BusRoute>& list, int size)
 {
 	string buffer;
 	int k = 0;
-	cout << "\nÂâåäèòå íîìåð ðåéñà íóæíîãî âàì ìàðøðóòà: ";
+	cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ñ€ÐµÐ¹ÑÐ° Ð½ÑƒÐ¶Ð½Ð¾Ð³Ð¾ Ð²Ð°Ð¼ Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚Ð°: ";
 	getline(cin, buffer);
 	cout << endl;
 	for (int i = 0; i < list.size(); i++)
 	{
 		if (buffer == list[i].flightNumber)
 		{
-			cout << "Àâòîáóñ " << i + 1 << ":" << endl;
-			cout << "Íîìåð ìàðøðóòà: " << list[i].flightNumber << endl;
-			cout << "Íàçâàíèå êîíå÷íîãî íàñåëåííîãî ïóíêòà: " << list[i].nameOfDestination << endl;
-			cout << "Öåíà áèëåòà: " << list[i].ticketPrice << endl;
-			cout << "Âðåìÿ îòïðàâëåíèÿ: " << list[i].departureTime << endl;
+			cout << "ÐÐ²Ñ‚Ð¾Ð±ÑƒÑ " << i + 1 << ":" << endl;
+			cout << "ÐÐ¾Ð¼ÐµÑ€ Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚Ð°: " << list[i].flightNumber << endl;
+			cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÐºÐ¾Ð½ÐµÑ‡Ð½Ð¾Ð³Ð¾ Ð½Ð°ÑÐµÐ»ÐµÐ½Ð½Ð¾Ð³Ð¾ Ð¿ÑƒÐ½ÐºÑ‚Ð°: " << list[i].nameOfDestination << endl;
+			cout << "Ð¦ÐµÐ½Ð° Ð±Ð¸Ð»ÐµÑ‚Ð°: " << list[i].ticketPrice << endl;
+			cout << "Ð’Ñ€ÐµÐ¼Ñ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: " << list[i].departureTime << endl;
 			cout << endl;
 			k++; 
 		}
 	}
 	if (k == 0)
 	{
-		cout << "Ìàðøðóò ñ äàííûì íîìåðîì íå íàéäåí!\n" << endl;
+		cout << "ÐœÐ°Ñ€ÑˆÑ€ÑƒÑ‚ Ñ Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ð½Ð¾Ð¼ÐµÑ€Ð¾Ð¼ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½!\n" << endl;
 	}
 }
 
@@ -123,22 +123,22 @@ void InBinarFile(vector <BusRoute>& list, int size)
 		read.write(reinterpret_cast <char*> (&list[i]), sizeof(list[i]));
 	}
 	read.close();
-	cout << "Çàïèñü â áèíàðíûé ôàéë ïðîøëà óñïåøíî!\n";
+	cout << "Ð—Ð°Ð¿Ð¸ÑÑŒ Ð² Ð±Ð¸Ð½Ð°Ñ€Ð½Ñ‹Ð¹ Ñ„Ð°Ð¹Ð» Ð¿Ñ€Ð¾ÑˆÐ»Ð° ÑƒÑÐ¿ÐµÑˆÐ½Ð¾!\n";
 }
 
 void OutBinarFile(vector <BusRoute>& list, int size)
 {
-	cout << "Âûïîëíÿåòñÿ ÷òåíèå èç áèíàðíîãî ôàéëà!\n";
+	cout << "Ð’Ñ‹Ð¿Ð¾Ð»Ð½ÑÐµÑ‚ÑÑ Ñ‡Ñ‚ÐµÐ½Ð¸Ðµ Ð¸Ð· Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ñ„Ð°Ð¹Ð»Ð°!\n";
 	ifstream in;
 	in.open("BinaryRoutes.dat", ios::binary);
 	for (int i = 0; i < size; i++)
 	{
 		in.read(reinterpret_cast <char*> (&list[i]), sizeof(list[i]));
-		cout << "Àâòîáóñ " << i + 1 << ":" << endl;
-		cout << "Íîìåð ìàðøðóòà: " << list[i].flightNumber << endl;
-		cout << "Íàçâàíèå êîíå÷íîãî íàñåëåííîãî ïóíêòà: " << list[i].nameOfDestination << endl;
-		cout << "Öåíà áèëåòà: " << list[i].ticketPrice << endl;
-		cout << "Âðåìÿ îòïðàâëåíèÿ: " << list[i].departureTime << endl;
+		cout << "ÐÐ²Ñ‚Ð¾Ð±ÑƒÑ " << i + 1 << ":" << endl;
+		cout << "ÐÐ¾Ð¼ÐµÑ€ Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚Ð°: " << list[i].flightNumber << endl;
+		cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÐºÐ¾Ð½ÐµÑ‡Ð½Ð¾Ð³Ð¾ Ð½Ð°ÑÐµÐ»ÐµÐ½Ð½Ð¾Ð³Ð¾ Ð¿ÑƒÐ½ÐºÑ‚Ð°: " << list[i].nameOfDestination << endl;
+		cout << "Ð¦ÐµÐ½Ð° Ð±Ð¸Ð»ÐµÑ‚Ð°: " << list[i].ticketPrice << endl;
+		cout << "Ð’Ñ€ÐµÐ¼Ñ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: " << list[i].departureTime << endl;
 		cout << endl;
 	}
 	in.close();
